@@ -1,0 +1,22 @@
+[
+  {
+    "ticket_id": "T-001",
+    "customer_email": "maya@example.com",
+    "message": "Where is my order BL-1001? It was supposed to arrive this week."
+  },
+  {
+    "ticket_id": "T-002",
+    "customer_email": "ryan@example.com",
+    "message": "I received my earbuds but want to return them. What is the refund process?"
+  },
+  {
+    "ticket_id": "T-003",
+    "customer_email": "dev@example.com",
+    "message": "My running shoes order BL-1004 is delayed again. Please help."
+  },
+  {
+    "ticket_id": "T-004",
+    "customer_email": "anika@example.com",
+    "message": "Can I cancel order BL-1003 before it ships?"
+  }
+]

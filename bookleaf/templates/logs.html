@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<section class="workspace">
+    <div class="toolbar">
+        <h1>Query Logs</h1>
+        <div class="filters">
+            <select id="intentFilter">
+                <option value="">All intents</option>
+                <option value="book_status">Book status</option>
+                <option value="royalty_info">Royalties</option>
+                <option value="dashboard_access">Dashboard</option>
+                <option value="addon_service">Add-ons</option>
+                <option value="author_copy">Author copy</option>
+                <option value="book_sales">Sales</option>
+                <option value="isbn_distribution">ISBN</option>
+                <option value="writing_challenge">Challenge</option>
+                <option value="refund_policy">Refund</option>
+                <option value="unknown">Unknown</option>
+            </select>
+            <select id="escalatedFilter">
+                <option value="">All outcomes</option>
+                <option value="true">Escalated only</option>
+                <option value="false">Auto-resolved only</option>
+            </select>
+        </div>
+    </div>
+    <div class="metric-row">
+        <div><strong id="totalLogs">0</strong><span>Total</span></div>
+        <div><strong id="escalatedLogs">0</strong><span>Escalated</span></div>
+        <div><strong id="avgConfidence">0%</strong><span>Avg confidence</span></div>
+    </div>
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Query</th>
+                    <th>Intent</th>
+                    <th>Confidence</th>
+                    <th>Outcome</th>
+                    <th>Author</th>
+                </tr>
+            </thead>
+            <tbody id="logsBody"></tbody>
+        </table>
+    </div>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="{% static 'js/logs.js' %}"></script>
+{% endblock %}

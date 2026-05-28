@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<section class="workspace chat-layout">
+    <aside class="side-panel">
+        <h1>Author Support</h1>
+        <label>
+            Registered email
+            <input id="emailInput" type="email" value="sara.johnson@example.com" placeholder="author@email.com">
+        </label>
+        <label>
+            Channel
+            <select id="channelInput">
+                <option value="web">Web chat</option>
+                <option value="email">Email</option>
+                <option value="whatsapp">WhatsApp</option>
+                <option value="instagram">Instagram DM</option>
+            </select>
+        </label>
+        <div class="quick-grid">
+            <button data-query="Is my book live yet?">Book status</button>
+            <button data-query="When will I get royalty payment?">Royalties</button>
+            <button data-query="Where is my author copy?">Author copy</button>
+            <button data-query="How do I join the 21 day challenge?">Challenge</button>
+        </div>
+    </aside>
+    <section class="chat-panel">
+        <div id="messages" class="messages">
+            <div class="message bot">
+                <p>Ask a BookLeaf support question. I will classify the intent, fetch author data, enrich from the knowledge base, and log the result.</p>
+            </div>
+        </div>
+        <form id="chatForm" class="composer">
+            <input id="queryInput" autocomplete="off" placeholder="Type an author query..." required>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="{% static 'js/chat.js' %}"></script>
+{% endblock %}

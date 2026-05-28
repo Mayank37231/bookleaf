@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<section class="workspace two-column">
+    <section class="tool-panel">
+        <h1>Identity Unification</h1>
+        <form id="identityForm" class="stack">
+            <label>
+                Identifier
+                <input id="identifierInput" value="@sarapoetry23" placeholder="email, phone, handle, name, or book title" required>
+            </label>
+            <label>
+                Platform
+                <select id="platformInput">
+                    <option value="">Auto-detect</option>
+                    <option value="email">Email</option>
+                    <option value="whatsapp">WhatsApp</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="dashboard">Dashboard</option>
+                    <option value="name">Name</option>
+                    <option value="book_title">Book title</option>
+                </select>
+            </label>
+            <button type="submit">Match Identity</button>
+        </form>
+    </section>
+    <section id="identityResult" class="result-panel">
+        <p class="muted">Search for an author identifier to see confidence scoring and verification controls.</p>
+    </section>
+</section>
+{% endblock %}
+{% block scripts %}
+<script src="{% static 'js/identity.js' %}"></script>
+{% endblock %}

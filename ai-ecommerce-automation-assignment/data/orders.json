@@ -1,0 +1,50 @@
+[
+  {
+    "order_id": "BL-1001",
+    "customer_email": "maya@example.com",
+    "customer_name": "Maya Kapoor",
+    "status": "in_transit",
+    "carrier": "Delhivery",
+    "tracking_number": "DLV92817364",
+    "eta": "2026-05-30",
+    "items": ["Linen summer dress", "Canvas tote"],
+    "total": 4299,
+    "risk_score": 0.12
+  },
+  {
+    "order_id": "BL-1002",
+    "customer_email": "ryan@example.com",
+    "customer_name": "Ryan Shah",
+    "status": "delivered",
+    "carrier": "Blue Dart",
+    "tracking_number": "BD44781120",
+    "eta": "2026-05-22",
+    "items": ["Noise-canceling earbuds"],
+    "total": 7999,
+    "risk_score": 0.08
+  },
+  {
+    "order_id": "BL-1003",
+    "customer_email": "anika@example.com",
+    "customer_name": "Anika Rao",
+    "status": "processing",
+    "carrier": "",
+    "tracking_number": "",
+    "eta": "2026-06-01",
+    "items": ["Ceramic dinner set"],
+    "total": 5299,
+    "risk_score": 0.18
+  },
+  {
+    "order_id": "BL-1004",
+    "customer_email": "dev@example.com",
+    "customer_name": "Dev Malhotra",
+    "status": "delayed",
+    "carrier": "Ecom Express",
+    "tracking_number": "ECM77542091",
+    "eta": "2026-06-03",
+    "items": ["Running shoes"],
+    "total": 3499,
+    "risk_score": 0.24
+  }
+]
